@@ -231,14 +231,14 @@ delayRando()
 // This function should traverse every node in the DOM. Use recursion.
 // On each node, call func(node).
 
+let test = (node) => {
+    console.log(node)
+}
+
 function walkTheDOM(node, func){
     for(let child of node.childNodes){
         func(child)
         walkTheDOM(child)
     }
 }
-walkTheDOM(document, test())
-
-function test(node){
-    console.log(node)
-}
+walkTheDOM(document, test)
