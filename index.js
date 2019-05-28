@@ -159,9 +159,12 @@ uSkills()
 function favColor(){
     let val = null
     let colors = document.getElementsByName('favoriteColor')
+    //let body = document.getElementsByTagName('body')[0]
     for (let color of colors){
         color.onchange = () => {
-            colors.bgColor = color.value
+            colors.forEach(element => {
+                element.style.backgroundColor = color.value
+            });
             if(val === null){
                 console.log('color selected')
             }
