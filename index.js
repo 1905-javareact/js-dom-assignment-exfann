@@ -238,7 +238,7 @@ let test = (node) => {
 function walkTheDOM(node, func){
     for(let child of node.childNodes){
         func(child)
-        walkTheDOM(child)
+        walkTheDOM(child, func)
     }
 }
 walkTheDOM(document, test)
